@@ -189,9 +189,10 @@ td.right {
 .ct-horizontal {
   stroke: transparent;
 }
-
-.ct-label .ct-horizontal {
-
+.ct-label.ct-horizontal {
+  @media @mobile {
+    font-size: 10px;
+  }
 }
 
 .ct-vertical {
