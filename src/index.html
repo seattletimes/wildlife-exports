@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child>
+    <section class="chatter">
+      <h1>Top trophy exports from Seattle</h1>
+      <p>Since 1999, 1,115 animals from the United States were shipped from the Port of Seattle. Bear, moose, sheep, caribou and deer were the most common exports. Nearly 66,000 trophy animals were imported during the same time period.</p>
+    </section>
+
+    <div class="top5">
+      <div class="top5title">Top 5:</div>
+    <img class="top5img" src="assets/bear.jpg">
+    <img  class="top5img" src="assets/caribou.jpg">
+    <img  class="top5img" src="assets/sheep.jpg">
+    <img  class="top5img" src="assets/moose.jpg">
+    <img  class="top5img" src="assets/deer.jpg">
+  </div>
+
+    <div class="ct-chart ct-minor-seventh"></div>
+    <div class="source"><em>Source: United State Fish and Wildlife Service</em></div>
+    <div class="credit">GARLAND POTTS / THE SEATTLE TIMES</div>
+
+
+  </responsive-child>
+
+  <script src="app.js" async></script>
+  <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+      <%= t.include("partials/_workHere.html") %>
+        <% } %>
+</body>
+
+</html>

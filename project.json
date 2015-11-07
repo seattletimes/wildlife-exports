@@ -1,0 +1,20 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+        "path": "wildlife-exports"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+        "path": "2015/local/wildlife-exports"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": [],
+  "image": "assets/social.jpg",
+  "production": true,
+  "embedded": true
+}

@@ -1,0 +1,150 @@
+@import "seattletimes";
+@import "chartist";
+
+body {
+  font-family: @df-sans;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 630px;
+  font-size: 16px;
+}
+.chatter {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  p {
+    text-align: center;
+    font-family: @df-serif;
+  }
+}
+
+.tooltip {
+    position: absolute;
+    display: inline-block;
+    min-width: 5em;
+    padding: .4em;
+    background: #f7f6f5;
+    border: 2px solid #ffffff;
+    color: #453D3F;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    stroke: #679BD2;
+    z-index: 1;
+}
+
+.ct-bar {
+  stroke-width:percentage(1/20);
+}
+
+.ct-series-a .ct-bar {
+  stroke: #679BD2;
+}
+.ct-series-a .ct-bar:hover{
+  stroke: #585858;
+}
+.ct-series-b .ct-bar {
+  stroke: #F26649;
+}
+.ct-series-b .ct-bar:hover{
+  stroke: #585858;
+}
+.ct-series-c .ct-bar {
+  stroke: #FEBD3E;
+}
+.ct-series-c .ct-bar:hover{
+  stroke: #585858;
+}
+.ct-series-d .ct-bar {
+  stroke: #7ACCC8;
+}
+.ct-series-d .ct-bar:hover{
+  stroke: #585858;
+}
+.ct-series-e .ct-bar {
+  stroke: #C08C9C;
+}
+.ct-series-e .ct-bar:hover{
+  stroke: #585858;
+}
+.ct-series-f .ct-bar {
+  stroke: #D9D9D9;
+}
+.ct-series-f .ct-bar:hover{
+  stroke: #585858;
+}
+
+.top5 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+      display: inline-block;
+  position:relative;
+
+  .top5title {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+  }
+  .ct-perfect-fifth:before {
+    display: block;
+    float: left;
+    width: 0;
+    height: 0;
+    padding-bottom: 90%;
+}
+  .top5img {
+      padding: 0;
+      text-align:center;
+    max-width: percentage(1/6);
+    height:auto;
+    // max-height: 70px;
+  }
+}
+
+.source {
+  padding-top: 20px;
+}
+
+.source, .credit {
+  text-align: right;
+  font-size:11.5px;
+  color: gray;
+}
+
+
+// .ct-grid {
+//   stroke: transparent;
+// }
+
+.ct-horizontal {
+  stroke: transparent;
+}
+
+.ct-label .ct-horizontal {
+
+}
+
+.ct-vertical {
+  stroke-dasharray: 0;
+}
+
+.ct-horizontal {
+//   -ms-transform: rotate(-90deg); /* IE 9 */
+// -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+// transform: rotate(-90deg);
+// // padding-right: 10px;
+// width: auto;
+// height: auto;
+
+// @media @mobile {
+//   padding-right: 15px;
+// }
+}
