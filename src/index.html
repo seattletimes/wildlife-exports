@@ -7,6 +7,7 @@
   </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <%= t.include("partials/_head.html") %>
 </head>
@@ -14,27 +15,34 @@
 <body>
 
   <responsive-child>
-    <section class="chatter">
-      <h1>Top trophy exports from Seattle</h1>
-      <p>Since 1999, 1,115 animals from the United States were shipped from the Port of Seattle. Bear, moose, sheep, caribou and deer were the most common exports. Nearly 66,000 trophy animals were imported during the same time period.</p>
-    </section>
+    <div class="outmost">
+      <section class="chatter">
+        <div class="title">Top trophy exports from Seattle</div>
+        Since 1999, 1,115 animals from the United States were shipped from the Port of Seattle. Bear, moose, sheep, caribou and deer were the most common exports. Nearly 66,000 trophy animals were imported during the same time period.
+      </section>
 
-    <div class="top5">
-      <div class="top5title">Top 5:</div>
-    <img class="top5img" src="assets/bear.jpg">
-    <img  class="top5img" src="assets/caribou.jpg">
-    <img  class="top5img" src="assets/sheep.jpg">
-    <img  class="top5img" src="assets/moose.jpg">
-    <img  class="top5img" src="assets/deer.jpg">
-  </div>
+      <div class="top5">
+        <div class="top5title">Top 5:</div>
+        <img class="top5img" src="assets/bear.jpg">
+        <img  class="top5img" src="assets/caribou.jpg">
+        <img  class="top5img" src="assets/sheep.jpg">
+        <img  class="top5img" src="assets/moose.jpg">
+        <img  class="top5img" src="assets/deer.jpg">
+      </div>
 
-    <div class="ct-chart ct-minor-seventh"></div>
-    <div class="source"><em>Source: United State Fish and Wildlife Service</em></div>
-    <div class="credit">GARLAND POTTS / THE SEATTLE TIMES</div>
+      <div class="ct-chart ct-minor-seventh"></div>
+      
+      <div class="table-title">Total exports (1999 &ndash; 2015)*</div>
+      <div class="table-chatter">*Does not include species with only one animal exported.</div>
+      <div class="table"></div>
 
 
+      <div class="source"><em>Source: United State Fish and Wildlife Service</em></div>
+      <div class="credit">GARLAND POTTS and AUDREY CARLSEN / THE SEATTLE TIMES</div>
+    </div>
   </responsive-child>
 
+  <script>var exportData = <%= JSON.stringify(csv.exports) %></script>
   <script src="app.js" async></script>
   <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>

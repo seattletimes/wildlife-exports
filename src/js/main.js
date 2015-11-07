@@ -5,6 +5,22 @@
 require("component-responsive-frame/child");
 var Chartist = require("./lib/chartist/dist/chartist.min.js");
 var $ = require("jquery");
+var dot = require("./lib/dot");
+var table = dot.compile(require("./_table.html"));
+
+$(".table").html(table(exportData.slice(0,10)));
+
+$(".table").on("click", ".seemore", function() {
+  $(".table").html(table(exportData));
+  $(".seemore").addClass("hidden");
+  $(".seeless").removeClass("hidden");
+});
+$(".table").on("click", ".seeless", function() {
+  console.log(exportData)
+  $(".table").html(table(exportData.slice(0,10)));
+  $(".seeless").addClass("hidden");
+  $(".seemore").removeClass("hidden");
+});
 
 // console.log(Chartist);
 //

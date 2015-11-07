@@ -1,0 +1,15 @@
+<table>
+  <% data.forEach(function(row) { %>
+    <tr>
+      <td>
+        <% if (row.color) { %>
+          <div class="swatch" style="background: <%= row.color %>;"></div>
+        <% } %>
+        <%= row.animal %>
+      <td class="right"><strong><%= row.number %></strong>
+  <% }); %>
+  <tr class="button">
+    <td colspan="2"><div class="hidden seeless" colspan="2"><i class="fa fa-angle-double-up"></i> SEE LESS</div>
+  <tr class="button">
+    <td colspan="2"><div class="seemore" colspan="2"><i class="fa fa-angle-double-down"></i> SEE MORE</div>
+</table>

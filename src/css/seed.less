@@ -8,16 +8,78 @@ body {
   max-width: 630px;
   font-size: 16px;
 }
+
+.outmost {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid @df-border-gray;
+  border-bottom: 1px solid @df-border-gray;
+}
+
+.hidden {
+  display: none;
+}
+
 .chatter {
-  h1 {
-    font-size: 20px;
-    text-align: center;
-    line-height: 1.2;
+  text-align: center;
+  padding-bottom: 20px;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+}
+
+.table-title {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+.table-chatter {
+  font-style: italic;
+  text-align: center;
+  color: @df-middle-gray;
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.table table {
+  font-size: 14px;
+  margin: auto;
+  border-collapse: collapse;
+
+  td {
+    border-bottom: 1px solid @df-border-gray;
+    padding: 4px 20px;
   }
 
-  p {
-    text-align: center;
-    font-family: @df-serif;
+  .button {
+    td {
+      padding: 0;
+      border-bottom: 0;
+    }
+  }
+}
+.swatch {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  margin-right: 2px;
+}
+td.right {
+  text-align: right;
+}
+.seemore, .seeless {
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+  background: lighten(#679bd2, 30%);
+  font-weight: bold;
+  padding: 6px;
+
+  &:hover {
+    background: lighten(#679bd2, 20%);
   }
 }
 
@@ -110,7 +172,7 @@ body {
 }
 
 .source {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .source, .credit {
